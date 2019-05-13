@@ -12,19 +12,19 @@ def switch_to(slot_name):
     if wid:
         cmd = "wmctrl -ia {}".format(wid)
         os.system(cmd)
-        print 'Switch to {}'.format(wid)
+        print('Switch to {}'.format(wid))
     else:
-        print 'No window at slot {}'.format(slot_name.upper())
+        print('No window at slot {}'.format(slot_name.upper()))
 
 
 def put_to(slot_name):
-    slots[slot_name] = wid = get_active_window_id()
-    print 'Put {} to slot {}'.format(wid, slot_name.upper())
+    slots[slot_name] = wid = int(get_active_window_id().decode(), 16)
+    print('Put {} to slot {}'.format(wid, slot_name.upper()))
 
 
 def alt_tab():
     keyboard.press_and_release('alt+tab')
-    print 'emulate alt+tab'
+    print('emulate alt+tab')
 
 
 def get_active_window_id():

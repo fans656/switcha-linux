@@ -17,5 +17,5 @@ for slot_ch in list('1234567890uiopklm') + ['comma', 'dot', 'slash', 'semicolon'
 
 keyboard.add_hotkey('ctrl+alt+j', window.alt_tab)
 
-print 'Started'
+print('Started')
 keyboard.wait()
